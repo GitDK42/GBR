@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project( beholder )
+set(CMAKE_PREFIX_PATH /usr/local/share/OpenCV/)
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( beholder src/beholder.cpp )
+target_link_libraries( beholder ${OpenCV_LIBS} )
